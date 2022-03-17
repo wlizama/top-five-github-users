@@ -33,7 +33,7 @@ const App = () => {
 						</CSSTransition>
 					</TransitionGroup>
 				} />
-				<Route path='person' element={
+				<Route path='person/:name' element={
 					<TransitionGroup component={null}>
 						<CSSTransition key={location.key} classNames="fade" timeout={300}>
 							<Person />
