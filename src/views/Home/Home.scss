@@ -1,0 +1,59 @@
+@import '../../assets/styles/variables.scss';
+
+.Home {
+    display: block;
+    font-style: normal;
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 42px;
+    }
+    
+    &__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        font-style: normal;
+    }
+
+    &__list {
+        list-style: none;
+        padding-top: 40px;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        &-item {
+            margin: 0 10px 10px 0;
+            a {
+                display: block;
+                padding: 17px 50px;
+                text-decoration: none;
+                color: #fff;
+                background-color: #3B89FF;
+                border-radius: 3px;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #2564C5;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $media-max-width) {
+    .Home {
+        &__title {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}

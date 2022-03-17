@@ -1,1 +1,11 @@
 @import '../../../assets/styles/variables.scss';
+
+.BodyContainer {
+    padding: 40px 71px;
+}
+
+@media (max-width: $media-max-width) {
+    .BodyContainer {
+        padding: 30px 20px;
+    }
+}
