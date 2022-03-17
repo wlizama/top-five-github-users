@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import Layout from './components/Layout'
@@ -14,11 +14,16 @@ import {
 const App = () => {
 
 	const location = useLocation();
+	const [showBackButton, setShowBackButton] = useState(false);
 	const title = 'Home'
+	
+	useEffect(() => {
+		setShowBackButton(location.pathname !== '/')
+	}, [location.pathname]);
 
     return (
       <Routes location={location}>
-            <Route path="/" element={<Layout title={title} />}>
+            <Route path="/" element={<Layout title={title} showBackButton={showBackButton} />}>
 				<Route index element={
 					<TransitionGroup component={null}>
 						<CSSTransition key={location.key} classNames="fade" timeout={300}>

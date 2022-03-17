@@ -1,3 +1,5 @@
+@import '../../../assets/styles/variables.scss';
+
 .Header {
     display: flex;
     align-items: center;
@@ -7,10 +9,39 @@
     left: 0;
     background: #282828;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+
+    &__back-button {
+        background-color: transparent;
+        color: #FFFFFF;
+        float: left;
+        border: 0;
+        box-shadow: none;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        position: absolute;
+        height: 21px;
+        left: 70px;
+        top: calc(50% - 21px/2);
+        cursor: pointer;
+
+        img {
+            margin-right: 10px;
+        }
+    }
 
     &__title {
         font-size: 18px;
         font-weight: 700;
         color: #fff;
+    }
+}
+
+@media (max-width: $media-max-width) {
+    .Header {
+        &__back-button {
+            left: 20px;
+        }
     }
 }
